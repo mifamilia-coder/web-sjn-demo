@@ -38,14 +38,14 @@ updateHeader();
 menuButton.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!isOpen));
-  menuButton.setAttribute('aria-label', isOpen ? 'Buka menu' : 'Tutup menu');
+  menuButton.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
   navigation.classList.toggle('is-open', !isOpen);
 });
 
 navigation.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
     menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.setAttribute('aria-label', 'Buka menu');
+    menuButton.setAttribute('aria-label', 'Open menu');
     navigation.classList.remove('is-open');
   });
 });
