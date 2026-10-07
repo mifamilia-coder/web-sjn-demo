@@ -88,7 +88,8 @@ button { font: inherit; }
 .group-title { display: flex; gap: 17px; align-items: center; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,.25); }
 .group-number { color: #efbd61; font-family: Manrope, Arial, sans-serif; font-size: 13px; font-weight: 700; }
 .group-title h3 { margin: 0; font-family: Manrope, Arial, sans-serif; font-size: 19px; }
-.service-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 27px; list-style: none; padding: 8px 0 0; margin: 0; }
+.service-list { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, minmax(0, auto)); grid-auto-flow: column; column-gap: 27px; list-style: none; padding: 8px 0 0; margin: 0; }
+.consultation-group .service-list { grid-template-rows: repeat(2, minmax(0, auto)); }
 .service-list li { display: flex; gap: 10px; align-items: start; min-height: 53px; padding: 13px 0; color: rgba(255,255,255,.81); font-size: 12px; line-height: 1.45; }
 .service-mark { color: #efbd61; font-size: 15px; line-height: 1.1; }
 
@@ -182,7 +183,7 @@ button { font: inherit; }
   .main-nav .nav-contact { padding-left: 18px; }
   .about-grid { gap: 35px; }
   .service-columns { gap: 32px; }
-  .service-list { grid-template-columns: 1fr; }
+  .service-list, .consultation-group .service-list { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
   .fleet-heading { align-items: start; }
   .fleet-feature-grid { grid-template-columns: 1fr 1fr; }
   .fleet-card-large { grid-column: 1 / -1; min-height: 380px; }
@@ -226,7 +227,7 @@ button { font: inherit; }
   .services-inner { padding-top: 73px; padding-bottom: 75px; }
   .service-columns { grid-template-columns: 1fr; gap: 30px; margin-top: 35px; }
   .group-title h3 { font-size: 17px; }
-  .service-list { grid-template-columns: 1fr 1fr; gap: 0 14px; }
+  .service-list, .consultation-group .service-list { grid-template-columns: 1fr 1fr; grid-template-rows: none; grid-auto-flow: row; gap: 0 14px; }
   .service-list li { min-height: 59px; font-size: 11px; }
   .fleet-section { padding-top: 73px; padding-bottom: 76px; }
   .fleet-heading { display: block; margin-bottom: 27px; }
